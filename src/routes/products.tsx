@@ -92,16 +92,16 @@ export const Route = createFileRoute("/products")({
 //  Leave src as "" until you have the file — a placeholder shows instead.
 // ─────────────────────────────────────────────────────────────────────────────
 const QUARTZ_BRANDS: { name: string; url: string; src: string }[] = [
-  { name: "Cambria",            url: "https://www.cambriausa.com/quartz-countertops/quartz-colors",                       src: "" },
-  { name: "Caesarstone",        url: "https://www.caesarstoneus.com/countertops/?material=quartz",                        src: "" },
-  { name: "Silestone",          url: "https://www.silestoneusa.com/",                                                     src: "" },
-  { name: "MSI Surfaces",       url: "https://www.msisurfaces.com/quartz-countertops/quartz-collections/",               src: "" },
-  { name: "HanStone",           url: "https://www.hanstone.ca/en/quartz/colours-hanstone",                               src: "" },
-  { name: "Vicostone",          url: "https://umistone.com/products/quartz/vicostone-quartz/",                           src: "" },
-  { name: "Corian Quartz",      url: "https://www.corianquartz.com/-colors-of-quartz-",                                  src: "" },
-  { name: "Wilsonart",          url: "https://www.wilsonart.com/quartz/design-library?product_list_mode=largethumb",     src: "" },
-  { name: "Gramaco Smart Quartz", url: "https://www.gramaco.com/quartz/",                                                src: "" },
-  { name: "Technistone",        url: "https://www.technistone.com/usa/color-range/",                                     src: "" },
+  { name: "Cambria",            url: "https://www.cambriausa.com/quartz-countertops/quartz-colors",                       src: "/images/brands/C2_IMAGE.png" },
+  { name: "Caesarstone",        url: "https://www.caesarstoneus.com/countertops/?material=quartz",                        src: "/images/brands/C_IMAGE.png" },
+  { name: "Silestone",          url: "https://www.silestoneusa.com/",                                                     src: "/images/brands/SILE_IMAGE.png" },
+  { name: "MSI Surfaces",       url: "https://www.msisurfaces.com/quartz-countertops/quartz-collections/",               src: "/images/brands/MSI_IMAGE.png" },
+  { name: "HanStone",           url: "https://www.hanstone.ca/en/quartz/colours-hanstone",                               src: "/images/brands/HANSTONE_IMAGE.png" },
+  { name: "Vicostone",          url: "https://umistone.com/products/quartz/vicostone-quartz/",                           src: "/images/brands/C2_IMAGE.png" },
+  { name: "Corian Quartz",      url: "https://www.corianquartz.com/-colors-of-quartz-",                                  src: "/images/brands/CORIAN_IMAGE.png" },
+  { name: "Wilsonart",          url: "https://www.wilsonart.com/quartz/design-library?product_list_mode=largethumb",     src: "/images/brands/C2_IMAGE.png" },
+  { name: "Gramaco Smart Quartz", url: "https://www.gramaco.com/quartz/",                                                src: "/images/brands/GRAM_IMAGE.png" },
+  { name: "Technistone",        url: "https://www.technistone.com/usa/color-range/",                                     src: "/images/brands/C2_IMAGE.png" },
 ];
 
 const GRANITE_BRANDS = [

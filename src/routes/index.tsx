@@ -214,19 +214,19 @@ function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-7">
-            <ImageSlot label="Quartz Kitchen · Residential" ratio="aspect-video" />
+            <img src="/images/showcase/first.jpeg" alt="Quartz kitchen residential" className="aspect-video w-full object-cover" />
             <div className="mt-3 flex justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               <span>01 · Pattern-Matched Quartz</span><span>Residential</span>
             </div>
           </div>
           <div className="md:col-span-5">
-            <ImageSlot label="Custom Granite Bar" ratio="aspect-[3/4]" />
+            <img src="/images/showcase/sixth.jpeg" alt="Custom granite bar" className="aspect-[3/4] w-full object-cover" />
             <div className="mt-3 flex justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               <span>02 · Granite Bar Top</span><span>Residential</span>
             </div>
           </div>
           <div className="md:col-span-12">
-            <ImageSlot label="Commercial Install" ratio="aspect-[21/9]" />
+            <img src="/images/showcase/ninth.jpeg" alt="Commercial install" className="aspect-[21/9] w-full object-cover" />
             <div className="mt-3 flex justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               <span>03 · Commercial Project</span><span>Baltimore Metro</span>
             </div>

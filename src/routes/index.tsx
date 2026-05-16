@@ -175,7 +175,7 @@ function Home() {
               ))}
             </div>
           </div>
-          <ImageSlot label="Why We're Different · Shop Photo" ratio="aspect-[4/5]" />
+          <img src="/images/store.jpeg" alt="Stone Solutions shop" className="aspect-[4/5] w-full object-cover" />
         </div>
       </Section>
 

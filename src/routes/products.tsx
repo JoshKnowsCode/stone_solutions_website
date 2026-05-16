@@ -1,6 +1,74 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Eyebrow } from "@/components/site/Section";
 
+// ─── Quartz brand image card ───────────────────────────────────────────────
+//
+//  Replace `src` with the actual image path once you have the files, e.g.:
+//    src="/images/brands/cambria.png"
+//  Leave src as "" to show the stone-texture placeholder.
+//
+interface BrandCardProps {
+  name: string;
+  url: string;
+  src: string;        // path to logo/swatch image — "" = placeholder
+  label: string;      // link label, e.g. "View Colors →"
+}
+
+function BrandCard({ name, url, src, label }: BrandCardProps) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${name} — ${label}`}
+      style={{ WebkitTapHighlightColor: "transparent" }}
+      className="group relative flex flex-col overflow-hidden bg-card border-r border-b border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+    >
+      {/* ── image area ── */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
+        {src ? (
+          <img
+            src={src}
+            alt={name}
+            className="absolute inset-0 h-full w-full object-contain p-6
+                       transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)]
+                       group-hover:scale-110 group-active:scale-105"
+          />
+        ) : (
+          /* placeholder — remove once real image is added */
+          <div className="absolute inset-0 stone-tex grid place-items-center">
+            <span className="text-[9px] uppercase tracking-[0.22em] text-white/25 select-none">
+              {name}
+            </span>
+          </div>
+        )}
+
+        {/* cyan shimmer overlay on hover */}
+        <div
+          className="pointer-events-none absolute inset-0
+                     bg-gradient-to-br from-primary/0 via-primary/10 to-primary/0
+                     opacity-0 transition-opacity duration-300
+                     group-hover:opacity-100 group-active:opacity-70"
+        />
+      </div>
+
+      {/* ── label strip ── */}
+      <div className="flex items-center justify-between px-5 py-4 border-t border-border
+                      transition-colors duration-200 group-hover:bg-primary/5">
+        <span className="font-display text-sm text-foreground
+                         transition-colors duration-200 group-hover:text-primary">
+          {name}
+        </span>
+        <span className="text-[9px] uppercase tracking-[0.22em] text-muted-foreground
+                         translate-x-0 transition-all duration-200
+                         group-hover:text-primary group-hover:translate-x-0.5">
+          {label}
+        </span>
+      </div>
+    </a>
+  );
+}
+
 const TITLE = "Products — Quartz & Granite Distributors | Stone Solutions";
 const DESC = "Stone Solutions carries products from leading quartz and granite distributors including Cambria, Caesarstone, Silestone, MSI, HanStone, Wilsonart, Gramaco, and more.";
 
@@ -18,18 +86,23 @@ export const Route = createFileRoute("/products")({
   component: ProductsPage,
 });
 
-const QUARTZ_BRANDS = [
-  { name: "Cambria", url: "https://www.cambriausa.com/quartz-countertops/quartz-colors" },
-  { name: "Caesarstone", url: "https://www.caesarstoneus.com/countertops/?material=quartz" },
-  { name: "Silestone", url: "https://www.silestoneusa.com/" },
-  { name: "MSI Surfaces", url: "https://www.msisurfaces.com/quartz-countertops/quartz-collections/" },
-  { name: "HanStone", url: "https://www.hanstone.ca/en/quartz/colours-hanstone" },
-  { name: "Vicostone", url: "https://umistone.com/products/quartz/vicostone-quartz/" },
-  { name: "Corian Quartz", url: "https://www.corianquartz.com/-colors-of-quartz-" },
-  { name: "Wilsonart", url: "https://www.wilsonart.com/quartz/design-library?product_list_mode=largethumb" },
-  { name: "Gramaco Smart Quartz", url: "https://www.gramaco.com/quartz/" },
-  { name: "Technistone", url: "https://www.technistone.com/usa/color-range/" },
-] as const;
+// ─── QUARTZ BRANDS ────────────────────────────────────────────────────────────
+//  Set `src` to the path of the logo/image you download for each brand.
+//  Example: src: "/images/brands/cambria.png"
+//  Leave src as "" until you have the file — a placeholder shows instead.
+// ─────────────────────────────────────────────────────────────────────────────
+const QUARTZ_BRANDS: { name: string; url: string; src: string }[] = [
+  { name: "Cambria",            url: "https://www.cambriausa.com/quartz-countertops/quartz-colors",                       src: "" },
+  { name: "Caesarstone",        url: "https://www.caesarstoneus.com/countertops/?material=quartz",                        src: "" },
+  { name: "Silestone",          url: "https://www.silestoneusa.com/",                                                     src: "" },
+  { name: "MSI Surfaces",       url: "https://www.msisurfaces.com/quartz-countertops/quartz-collections/",               src: "" },
+  { name: "HanStone",           url: "https://www.hanstone.ca/en/quartz/colours-hanstone",                               src: "" },
+  { name: "Vicostone",          url: "https://umistone.com/products/quartz/vicostone-quartz/",                           src: "" },
+  { name: "Corian Quartz",      url: "https://www.corianquartz.com/-colors-of-quartz-",                                  src: "" },
+  { name: "Wilsonart",          url: "https://www.wilsonart.com/quartz/design-library?product_list_mode=largethumb",     src: "" },
+  { name: "Gramaco Smart Quartz", url: "https://www.gramaco.com/quartz/",                                                src: "" },
+  { name: "Technistone",        url: "https://www.technistone.com/usa/color-range/",                                     src: "" },
+];
 
 const GRANITE_BRANDS = [
   { name: "Emerstone", url: "https://emerstone.com/" },
@@ -64,16 +137,7 @@ function ProductsPage() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-border">
           {QUARTZ_BRANDS.map((b) => (
-            <a
-              key={b.name}
-              href={b.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-background p-8 flex flex-col justify-between hover:bg-card transition-colors"
-            >
-              <span className="font-display text-lg group-hover:text-primary transition-colors">{b.name}</span>
-              <span className="mt-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground group-hover:text-primary transition-colors">View Colors →</span>
-            </a>
+            <BrandCard key={b.name} name={b.name} url={b.url} src={b.src} label="View Colors →" />
           ))}
         </div>
       </Section>

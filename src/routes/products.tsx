@@ -97,11 +97,11 @@ const QUARTZ_BRANDS: { name: string; url: string; src: string }[] = [
   { name: "Silestone",          url: "https://www.silestoneusa.com/",                                                     src: "/images/brands/SILE_IMAGE.png" },
   { name: "MSI Surfaces",       url: "https://www.msisurfaces.com/quartz-countertops/quartz-collections/",               src: "/images/brands/MSI_IMAGE.png" },
   { name: "HanStone",           url: "https://www.hanstone.ca/en/quartz/colours-hanstone",                               src: "/images/brands/HANSTONE_IMAGE.png" },
-  { name: "Vicostone",          url: "https://umistone.com/products/quartz/vicostone-quartz/",                           src: "/images/brands/C2_IMAGE.png" },
+  { name: "Vicostone",          url: "https://umistone.com/products/quartz/vicostone-quartz/",                           src: "/images/brands/VICO_IMAGE.png" },
   { name: "Corian Quartz",      url: "https://www.corianquartz.com/-colors-of-quartz-",                                  src: "/images/brands/CORIAN_IMAGE.png" },
-  { name: "Wilsonart",          url: "https://www.wilsonart.com/quartz/design-library?product_list_mode=largethumb",     src: "/images/brands/C2_IMAGE.png" },
+  { name: "Wilsonart",          url: "https://www.wilsonart.com/quartz/design-library?product_list_mode=largethumb",     src: "/images/brands/WIL_IMAGE.png" },
   { name: "Gramaco Smart Quartz", url: "https://www.gramaco.com/quartz/",                                                src: "/images/brands/GRAM_IMAGE.png" },
-  { name: "Technistone",        url: "https://www.technistone.com/usa/color-range/",                                     src: "/images/brands/C2_IMAGE.png" },
+  { name: "Technistone",        url: "https://www.technistone.com/usa/color-range/",                                     src: "/images/brands/TECH_IMAGE.png" },
 ];
 
 const GRANITE_BRANDS = [

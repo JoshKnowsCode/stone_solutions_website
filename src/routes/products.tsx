@@ -94,7 +94,7 @@ export const Route = createFileRoute("/products")({
 const QUARTZ_BRANDS: { name: string; url: string; src: string }[] = [
   { name: "Cambria",            url: "https://www.cambriausa.com/quartz-countertops/quartz-colors",                       src: "/images/brands/C2_IMAGE.png" },
   { name: "Caesarstone",        url: "https://www.caesarstoneus.com/countertops/?material=quartz",                        src: "/images/brands/C_IMAGE.png" },
-  { name: "Silestone",          url: "https://www.silestoneusa.com/",                                                     src: "/images/brands/SILE_IMAGE.png" },
+  { name: "Silestone",          url: "https://www.silestoneusa.com/",                                                     src: "/images/brands/SILE_IMAGE.jpeg" },
   { name: "MSI Surfaces",       url: "https://www.msisurfaces.com/quartz-countertops/quartz-collections/",               src: "/images/brands/MSI_IMAGE.png" },
   { name: "HanStone",           url: "https://www.hanstone.ca/en/quartz/colours-hanstone",                               src: "/images/brands/HANSTONE_IMAGE.png" },
   { name: "Vicostone",          url: "https://umistone.com/products/quartz/vicostone-quartz/",                           src: "/images/brands/VICO_IMAGE.png" },

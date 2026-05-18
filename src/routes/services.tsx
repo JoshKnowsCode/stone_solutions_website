@@ -22,10 +22,10 @@ export const Route = createFileRoute("/services")({
 });
 
 const GALLERY_ITEMS = [
-  { label: "Residential Kitchen · Quartz", ratio: "aspect-video", tag: "Residential" },
-  { label: "Granite Bar Top", ratio: "aspect-[3/4]", tag: "Residential" },
-  { label: "Commercial Bar", ratio: "aspect-video", tag: "Commercial" },
-  { label: "Bathroom Vanity", ratio: "aspect-[3/4]", tag: "Residential" },
+  { label: "Residential Kitchen · Quartz", ratio: "aspect-video", tag: "Residential", src: "/images/showcase/fourth.jpeg" },
+  { label: "Granite Bar Top", ratio: "aspect-[3/4]", tag: "Residential", src: "/images/showcase/sixth.jpeg" },
+  { label: "Commercial Bar", ratio: "aspect-video", tag: "Commercial", src: "/images/showcase/ninth.jpeg" },
+  { label: "Bathroom Vanity", ratio: "aspect-[3/4]", tag: "Residential", src: "/images/showcase/eighth.jpeg" },
 ] as const;
 
 function ServicesPage() {
@@ -49,25 +49,25 @@ function ServicesPage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-7">
-            <ImageSlot label={GALLERY_ITEMS[0].label} ratio={GALLERY_ITEMS[0].ratio} />
+            <img src={GALLERY_ITEMS[0].src} alt={GALLERY_ITEMS[0].label} className={`w-full object-cover ${GALLERY_ITEMS[0].ratio}`} />
             <div className="mt-3 flex justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               <span>01 · {GALLERY_ITEMS[0].label}</span><span>{GALLERY_ITEMS[0].tag}</span>
             </div>
           </div>
           <div className="md:col-span-5">
-            <ImageSlot label={GALLERY_ITEMS[1].label} ratio={GALLERY_ITEMS[1].ratio} />
+            <img src={GALLERY_ITEMS[1].src} alt={GALLERY_ITEMS[1].label} className={`w-full object-cover ${GALLERY_ITEMS[1].ratio}`} />
             <div className="mt-3 flex justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               <span>02 · {GALLERY_ITEMS[1].label}</span><span>{GALLERY_ITEMS[1].tag}</span>
             </div>
           </div>
           <div className="md:col-span-5">
-            <ImageSlot label={GALLERY_ITEMS[2].label} ratio={GALLERY_ITEMS[2].ratio} />
+            <img src={GALLERY_ITEMS[2].src} alt={GALLERY_ITEMS[2].label} className={`w-full object-cover ${GALLERY_ITEMS[2].ratio}`} />
             <div className="mt-3 flex justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               <span>03 · {GALLERY_ITEMS[2].label}</span><span>{GALLERY_ITEMS[2].tag}</span>
             </div>
           </div>
           <div className="md:col-span-7">
-            <ImageSlot label={GALLERY_ITEMS[3].label} ratio={GALLERY_ITEMS[3].ratio} />
+            <img src={GALLERY_ITEMS[3].src} alt={GALLERY_ITEMS[3].label} className={`w-full object-cover ${GALLERY_ITEMS[3].ratio}`} />
             <div className="mt-3 flex justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               <span>04 · {GALLERY_ITEMS[3].label}</span><span>{GALLERY_ITEMS[3].tag}</span>
             </div>

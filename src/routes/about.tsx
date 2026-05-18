@@ -125,7 +125,7 @@ function AboutPage() {
               reliable, and top quality countertop installations and services."
             </blockquote>
           </div>
-          <img src="/images/showcase/eleven.jpeg" alt="Customer Satisfaction · Team at Work" className="aspect-[4/5] w-full object-cover" />
+          <img src="/images/showcase/eleven.png" alt="Customer Satisfaction · Team at Work" className="aspect-[4/5] w-full object-cover" />
         </div>
       </Section>
     </>

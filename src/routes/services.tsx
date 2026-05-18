@@ -99,7 +99,7 @@ function ServicesPage() {
               ))}
             </ul>
           </div>
-          <ImageSlot label="Countertop Installation" ratio="aspect-[4/5]" />
+          <img src="/images/showcase/ten.png" alt="Countertop Installation" className="aspect-[4/5] w-full object-cover" />
         </div>
       </Section>
 

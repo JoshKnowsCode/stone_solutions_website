@@ -44,7 +44,7 @@ function AboutPage() {
               Materials billing so the price you're quoted is the price you pay.
             </p>
           </div>
-          <ImageSlot label="The Shop · Rosedale, MD" ratio="aspect-[4/5]" />
+          <img src="/images/shop.jpeg" alt="The Shop · Rosedale, MD" className="aspect-[4/5] w-full object-cover" />
         </div>
       </Section>
 
@@ -125,7 +125,7 @@ function AboutPage() {
               reliable, and top quality countertop installations and services."
             </blockquote>
           </div>
-          <ImageSlot label="Customer Satisfaction · Team at Work" ratio="aspect-[4/5]" />
+          <img src="/images/showcase/eleven.jpeg" alt="Customer Satisfaction · Team at Work" className="aspect-[4/5] w-full object-cover" />
         </div>
       </Section>
     </>
